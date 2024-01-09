@@ -1,0 +1,57 @@
+.MainPage{
+    /*I needed to create a pattern, i tried with flexbox but it didn't work xd, so i checked in google and there is a way that you could create a pattern using the repeating-linear-gradient property of background-image*/
+    background-image: repeating-linear-gradient(var(--YellowPrimary), var(--YellowPrimary)1.9rem,var(--Black) 2rem);
+    width: 58.6vw;
+    border-radius: 1rem; 
+    display:flex;
+    flex-direction: row;
+    height: 90vh;
+    position: relative;
+}
+.MainPage::before{
+    content: '';
+    width:.16rem;
+    height: 100%;
+    background-color: var(--RedPrimary);
+    /*Set absolute values*/
+    left: 8.6vw;
+    position: absolute;
+
+}
+#MainContent{   
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+#HeaderPage{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;   
+    border-bottom: .16rem var(--RedPrimary) solid;   
+}
+
+/*Setting the same Title position for its input*/
+
+p,h2,textarea,input[type="text"]{
+    position: absolute;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+}
+/*Set values for my textarea and p tags */
+#InputText,p{
+    width: 50vw;
+    line-height: 2rem;
+    min-height: 90%;
+    padding:0 1rem;    
+    left: 8.6vw;
+
+}
+/*I need to layout my input text value*/
+#InputText{
+    z-index: 1;
+}
+

@@ -1,0 +1,20 @@
+@import url('./css/notepad.css');
+@import url('./css/pencil.css');
+@import url('./css/pencilcase.css');
+@import url('./css/page.css');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    border:none;
+    
+}
+:root{
+    --YellowPrimary:hsl(42, 99%, 70%);
+    --GreenBlue:hsl(177, 93%, 22%);
+    --BluePrimary:hsl(230, 84%, 23%);
+    --RedPrimary:hsl(357, 99%, 28%);
+    --White:#fff;
+    --Black:#000;
+}
