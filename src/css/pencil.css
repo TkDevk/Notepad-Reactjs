@@ -9,10 +9,10 @@
 
 .PencilFigure{
     height: 40svh;
-    width: 4svw;
+    width: 3svw;
     display: flex;
     flex-direction: column;
-    padding:.5rem;
+   
 
 }
 /*I needed to create a triangule figure so i used clip-path: polygon property, actually pretty cool you can do any figures with clip-path*/

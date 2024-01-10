@@ -1,11 +1,11 @@
 import Page from "./Page"
-import Pencil from "./Pencil"
+import PencilCase from "./PencilCase"
 const NotePad= ()=>{
     return(
         <>
           <main className="BodyPad">
             <Page/>
-            <Pencil/>
+            <PencilCase/>
           </main>
         </>
     )

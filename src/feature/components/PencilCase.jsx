@@ -1,8 +1,12 @@
+import Pencil from "./Pencil"
+
 const PencilCase = ()=>{
     return(
         <>
-        <section>
-            <figure></figure>
+        <section id="PencilCaseContainer">
+            <Pencil />
+            <Pencil />
+            <Pencil />
         </section>
         </>
     )
