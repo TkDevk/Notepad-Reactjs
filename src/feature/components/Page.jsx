@@ -1,10 +1,11 @@
-import useState from "react"
+import {useState} from "react"
 const Page = ()=>{
-   const [text, textState] = useState(''); //i will pass empty value to text and textState will change it
+   const [text, setText] = useState("") //i will pass empty value to text and textState will change it
+   
    function handleText(event){  //when i need to modify something it's better to use the word handle in my f(x)
-      const newText = event.target.value;
+      const newText = event.target.value
       //Now i will pass the value to textState
-      textState(newText) 
+      setText(newText) 
    }  
     return(
         <>
@@ -18,10 +19,10 @@ const Page = ()=>{
                 <input type="text" id="inputTitle" placeholder="Insert Title"/>
                 <h2 id="TextTitle"></h2>
              </header>
-             <section>
+             <section className="TextContainer">
                {/*I will not place () at handleText becase i will only call it when the value it changes it*/}
                 <textarea placeholder="Insert Text" name="textarea" id="InputText" onChange={handleText} value={text}></textarea>
-                <p id="ShowText">{text}</p>
+                <p className="ShowText">{text}</p>
              </section>
              </main>
 

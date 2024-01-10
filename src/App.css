@@ -3,12 +3,18 @@
 @import url('./css/pencilcase.css');
 @import url('./css/page.css');
 
+/**Fonts*/
+@font-face {
+    font-family: 'Salsa';
+    src: url('/notepad-reactjs/public/Salsa/Salsa-Regular.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
     border:none;
-    
 }
 :root{
     --YellowPrimary:hsl(42, 99%, 70%);

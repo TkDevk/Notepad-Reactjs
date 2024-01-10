@@ -16,7 +16,6 @@
     /*Set absolute values*/
     left: 8.6vw;
     position: absolute;
-
 }
 #MainContent{   
     display: flex;
@@ -50,20 +49,29 @@ input[type="text"]::placeholder{
    font-size: 15px;
 }
 /*Set values for my textarea and p tags */
-#InputText,p{
+#InputText{
     width: 50vw;
     line-height: 2rem;
     min-height: 80%;
     padding:0 1rem;    
     left: 8.6vw;
-
-}
-/*I need to layout my input text value*/
-#InputText{
     z-index: 1;
     font-size: 20px;
+    font-family: 'Salsa', cursive;
+    font-weight: 600;
 }
+/*I need to layout my input text value*/
 textarea::placeholder{
     font-style: italic;
     font-size: 15px;
+}
+.ShowText{
+    display: none;
+    width: 50vw;
+    line-height: 2rem;
+    align-self: center;
+    padding:0 1rem;    
+    left: 8.6vw;
+    font-weight: 600;
+    font-size: 20px;
 }
