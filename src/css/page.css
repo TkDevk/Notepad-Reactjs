@@ -2,7 +2,7 @@
     /*I needed to create a pattern, i tried with flexbox but it didn't work xd, so i checked in google and there is a way that you could create a pattern using the repeating-linear-gradient property of background-image*/
     background-image: repeating-linear-gradient(var(--YellowPrimary), var(--YellowPrimary)1.9rem,var(--Black) 2rem);
     width: 58.6vw;
-    border-radius: 1rem; 
+    border-radius: .5rem; 
     display:flex;
     flex-direction: row;
     height: 90vh;
@@ -41,11 +41,19 @@ p,h2,textarea,input[type="text"]{
     outline: none;
     resize: none;
 }
+input[type="text"]{
+    font-size: 20px;
+    font-weight: 600;
+}
+input[type="text"]::placeholder{
+   font-style: italic;
+   font-size: 15px;
+}
 /*Set values for my textarea and p tags */
 #InputText,p{
     width: 50vw;
     line-height: 2rem;
-    min-height: 90%;
+    min-height: 80%;
     padding:0 1rem;    
     left: 8.6vw;
 
@@ -53,5 +61,9 @@ p,h2,textarea,input[type="text"]{
 /*I need to layout my input text value*/
 #InputText{
     z-index: 1;
+    font-size: 20px;
 }
-
+textarea::placeholder{
+    font-style: italic;
+    font-size: 15px;
+}

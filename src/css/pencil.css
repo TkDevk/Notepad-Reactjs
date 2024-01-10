@@ -1,0 +1,41 @@
+/*Setting the pencil colors values*/
+:root{
+   --Wood:hsl(28.6, 44.33%, 61.96%) ;
+   
+   
+}
+
+/*Let's start with the body*/
+
+.PencilFigure{
+    height: 40svh;
+    width: 4svw;
+    display: flex;
+    flex-direction: column;
+    padding:.5rem;
+
+}
+/*I needed to create a triangule figure so i used clip-path: polygon property, actually pretty cool you can do any figures with clip-path*/
+.PencilPoint{
+    position: relative;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background-color: var(--Wood);
+    height: 20%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.PencilLead{
+    width:100%;
+    height: 3svh;
+    background-color: var(--RedPrimary); 
+    z-index: 1;
+    position: absolute;
+}
+.PencilBody{
+    position: relative;
+    background-color: var(--RedPrimary); 
+    height: 60%;
+}
