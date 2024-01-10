@@ -4,12 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 0;
-    cursor: pointer;
+    right:.0;  
 }
 
 #PencilCase {
-    right: inherit;
     display: none;
     right: inherit;
     align-self: center;
@@ -21,23 +19,34 @@
 
 #ShowColor {
     display: flex;
-    height: 7rem;
-    width: 7rem;
+    height: 7.5rem;
+    width: 8rem;
     background-color: #b8b4b484;
-    border: .2rem #b8b4b4 solid;
     justify-content: flex-end;
     align-items: center;
     clip-path: circle(55% at 80% 50%);
     z-index: 1;
+    
 }
 
-#ShowColor>picture {
+#PaletteContainer {
     /*--c: #0000 64%,#000 66% 98%,#0000 101%;
     animation: show 1s infinite linear;*/
     display: flex;
+    
 }
 
-#ShowColor>picture>img {
+
+#PaletteContainer:hover{
+    
+    transition: transform 3s;
+    transform: rotate(360deg);
+    cursor: pointer;
+
+}
+
+
+#PaletteIcon{
     /*--c: #0000 64%,#000 66% 98%,#0000 101%;
     animation: show 1s infinite linear;*/
     position: absolute;
@@ -57,12 +66,6 @@
     position: relative;
 }
 
-@keyframes show {
-    to {
-        left: 50% 0, 75% 100%;
-    }
-}
-
 #ColorPalleteBehind{
     /*Absolute so i can place it behind the svg icon*/
     position: absolute;
@@ -72,8 +75,11 @@
     background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+    /*Settig the position behind the SVG icon*/
     z-index: -2;
     position: relative;
     height: 4rem;
     width: 4rem;
+    
 }
+

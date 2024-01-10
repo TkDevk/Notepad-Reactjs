@@ -75,3 +75,7 @@ textarea::placeholder{
     font-weight: 600;
     font-size: 20px;
 }
+h2{
+    display: none;
+    /*24 characters*/
+}

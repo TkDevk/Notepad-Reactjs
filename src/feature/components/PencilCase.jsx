@@ -4,11 +4,11 @@ const PencilCase = () => {
     return (
         <article id="PencilCaseContainer">
             <section id="ShowColor">
-                <picture>
+                <picture id="PaletteContainer">
                     <figure id="ColorPalleteBehind">
                     </figure>
                    {/* <figure id="ColorPallete">*/}
-                       <img src="palette-solid.svg" 
+                       <img id="PaletteIcon" src="palette-solid.svg" 
                        alt="Palette Icon" />
                     {/*</figure>*/}
                 </picture>
