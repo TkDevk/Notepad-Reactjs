@@ -1,14 +1,27 @@
 import Pencil from "./Pencil"
 
-const PencilCase = ()=>{
-    return(
-        <>
-        <section id="PencilCaseContainer">
-            <Pencil />
-            <Pencil />
-            <Pencil />
-        </section>
-        </>
+const PencilCase = () => {
+    return (
+        <article id="PencilCaseContainer">
+            <section id="ShowColor">
+                <picture>
+                    <figure id="ColorPalleteBehind">
+                    </figure>
+                   {/* <figure id="ColorPallete">*/}
+                       <img src="palette-solid.svg" 
+                       alt="Palette Icon" />
+                    {/*</figure>*/}
+                </picture>
+            </section>
+            <section id="PencilCase">
+                <Pencil />
+                <Pencil />
+                <Pencil />
+                <Pencil />
+                <Pencil />
+                <Pencil />
+            </section>
+        </article>
     )
 }
 

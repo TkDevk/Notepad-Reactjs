@@ -1,6 +1,6 @@
 /*Setting the pencil colors values*/
 :root{
-   --Wood:hsl(28.6, 44.33%, 61.96%) ;
+   --Wood:hsl(28.6, 44.33%, 61.96%);
    
    
 }
@@ -12,8 +12,6 @@
     width: 3svw;
     display: flex;
     flex-direction: column;
-   
-
 }
 /*I needed to create a triangule figure so i used clip-path: polygon property, actually pretty cool you can do any figures with clip-path*/
 .PencilPoint{

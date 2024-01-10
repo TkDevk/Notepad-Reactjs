@@ -1,10 +1,79 @@
 /*Accordion*/
-#PencilCaseContainer{
-    display: flex;
+#PencilCaseContainer {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 0;
+    cursor: pointer;
+}
+
+#PencilCase {
+    right: inherit;
+    display: none;
+    right: inherit;
     align-self: center;
-    gap:.3rem;
+    gap: .3rem;
     padding: .5rem;
-    background-color: antiquewhite;
+    background-color: #b8b4b4;
+
+}
+
+#ShowColor {
+    display: flex;
+    height: 7rem;
+    width: 7rem;
+    background-color: #b8b4b484;
+    border: .2rem #b8b4b4 solid;
+    justify-content: flex-end;
+    align-items: center;
+    clip-path: circle(55% at 80% 50%);
+    z-index: 1;
+}
+
+#ShowColor>picture {
+    /*--c: #0000 64%,#000 66% 98%,#0000 101%;
+    animation: show 1s infinite linear;*/
+    display: flex;
+}
+
+#ShowColor>picture>img {
+    /*--c: #0000 64%,#000 66% 98%,#0000 101%;
+    animation: show 1s infinite linear;*/
+    position: absolute;
+    width: 4rem;
+    
+    /*Svg color*/
+    filter: invert(10%) sepia(50%) saturate(6902%) hue-rotate(299deg) brightness(50%) contrast(100%);
+    z-index: 2;
+}
+
+#ColorPallete {
+    border-radius: 50%;
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+    z-index: -2;
+    position: relative;
+}
+
+@keyframes show {
+    to {
+        left: 50% 0, 75% 100%;
+    }
+}
+
+#ColorPalleteBehind{
+    /*Absolute so i can place it behind the svg icon*/
+    position: absolute;
+    /*Setting the custom chape*/
+    clip-path: polygon(50% 0%,83% 12%,84% 31%,76% 52%,58% 63%,22% 92%,6% 78%,0% 43%,17% 12%);
+    /*Setting gradiente colors from Red to Yellow*/
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+    z-index: -2;
+    position: relative;
+    height: 4rem;
+    width: 4rem;
 }
