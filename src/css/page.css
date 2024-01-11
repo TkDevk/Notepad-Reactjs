@@ -1,3 +1,6 @@
+:root{
+    --GreenBtn:hsl(125, 93%, 22%);
+}
 .MainPage{
     /*I needed to create a pattern, i tried with flexbox but it didn't work xd, so i checked in google and there is a way that you could create a pattern using the repeating-linear-gradient property of background-image*/
     background-image: repeating-linear-gradient(var(--YellowPrimary), var(--YellowPrimary)1.9rem,var(--Black) 2rem);
@@ -78,4 +81,45 @@ textarea::placeholder{
 h2{
     display: none;
     /*24 characters*/
+}
+
+/*Download Button*/
+#btnDownload{
+    display: flex;
+    flex-direction: column;
+    gap:.2rem;
+    cursor: pointer;
+    left:10%;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    padding:.5rem;
+    border-radius:.6rem;
+    width: fit-content;
+    height:6rem;
+    background-color: var(--GreenBtn);
+    color:var(--White);
+    gap:.5rem;
+    font-weight: 400;
+    transition:transform 1000ms;
+
+    &:hover{
+        #PrintIcon{
+            filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(312deg) brightness(106%) contrast(105%);
+        }
+    }
+    
+    
+}
+#PrintContainer{
+    width: 4rem;
+}
+#PrintIcon{
+    width: 3rem;
+}
+
+#btnDownload:hover{
+    transform:scale(1.2);
+    transition: transform 250ms;
+    
 }

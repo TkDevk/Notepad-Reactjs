@@ -8,7 +8,7 @@
 }
 
 #PencilCase {
-    display: none;
+    display: flex;
     right: inherit;
     align-self: center;
     gap: .3rem;
@@ -26,7 +26,14 @@
     align-items: center;
     clip-path: circle(55% at 80% 50%);
     z-index: 1;
-    
+    cursor: pointer;
+    transition: height 500ms,margin-right 500ms,background-color 500ms ease-in-out;   
+}
+
+#ShowColor:hover{
+    height: 10rem;
+    margin-right: .1svw;
+    background-color:hsl(165, 84%, 15%,0.5);
 }
 
 #PaletteContainer {
@@ -36,7 +43,7 @@
     
 }
 
-
+/*
 #PaletteContainer:hover{
     
     transition: transform 3s;
@@ -45,7 +52,7 @@
 
 }
 
-
+*/
 #PaletteIcon{
     /*--c: #0000 64%,#000 66% 98%,#0000 101%;
     animation: show 1s infinite linear;*/

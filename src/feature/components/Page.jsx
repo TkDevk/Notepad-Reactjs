@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { toPng } from "html-to-image"
+import download from "downloadjs"
 const Page = () => {
    /*
    const [inputText, setText] = useState("") //i will pass empty value to text and textState will change it
@@ -10,34 +12,50 @@ const Page = () => {
       console.log(newText)
       setText(newText)
    }*/
-    //onChange={handleText}
+   //onChange={handleText}
 
    //localStorage use it with text
    const [inputText, setText] = useState(
       window.localStorage.getItem('inputText')
    )
-   function setLocalStorage (value){
+   function setLocalStorage(value) {
       try {
          setText(value)
-         window.localStorage.setItem("inputText",value)
+         window.localStorage.setItem("inputText", value)
          console.log(value)
-      }catch(error){
-         console.log(error)    
-      }
-   }
-   
-   //localStorage use it with title
-   const[inputTitle,setTitle] = useState(
-      window.localStorage.getItem('inputTitle')
-   )
-   function setTitleStorage (value){
-      try{
-         setTitle(value)
-         window.localStorage.setItem('inputTitle',value) //(key,var)
-      }catch(error){
+      } catch (error) {
          console.log(error)
       }
    }
+
+   //localStorage use it with title
+   const [inputTitle, setTitle] = useState(
+      window.localStorage.getItem('inputTitle')
+   )
+   function setTitleStorage(value) {
+      try {
+         setTitle(value)
+         window.localStorage.setItem('inputTitle', value) //(key,var)
+      } catch (error) {
+         console.log(error)
+      }
+   }
+   /*To download my html tag as image i will use 2 libraries
+   1- npm install html-to-image
+   2- npm install downloadjs
+   3- import {toPng} from "html-to-image"
+   4- import download from "downloadjs"
+   */
+
+    //1) Get the class from DOM
+    const pngDownload = document.querySelector('.MainPage');
+    function btnDownload(){
+      toPng(pngDownload)
+      .then(dataPng =>{
+         download(dataPng, 'NotePad.png')
+      })
+      .catch(error=>console.log(error))
+    }
 
    return (
       <>
@@ -51,13 +69,13 @@ const Page = () => {
                   <input
                      type="text"
                      id="inputTitle"
-                     placeholder="Insert Title" 
+                     placeholder="Insert Title"
                      value={inputTitle}
-                     onChange={e=>setTitleStorage(e.target.value)}
-                     />
+                     onChange={e => setTitleStorage(e.target.value)}
+                  />
                   <h2 id="TextTitle">
-                    {inputTitle}
-                  </h2> 
+                     {inputTitle}
+                  </h2>
                </header>
                <section className="TextContainer">
                   {/*I will not place () at handleText becase i will only call it when the value it changes it*/}
@@ -66,7 +84,7 @@ const Page = () => {
                      placeholder="Insert Text"
                      name="textarea"
                      id="InputText"
-                     onChange={e=>setLocalStorage(e.target.value)}     
+                     onChange={e => setLocalStorage(e.target.value)}
                      value={inputText}>
 
                   </textarea>
@@ -77,8 +95,20 @@ const Page = () => {
                   </p>
                </section>
             </main>
-
+            
+{/*Button to download my html tag*/}
          </section>
+         <button
+               id="btnDownload"
+               onClick={btnDownload}
+            >
+               <picture id="PrintContainer">
+               <img id="PrintIcon"
+                src="print-solid.svg"
+                alt="Print Icon" />
+               </picture>
+               Print
+            </button>
       </>
    )
 }
