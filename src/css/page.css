@@ -1,5 +1,6 @@
 :root{
     --GreenBtn:hsl(125, 93%, 22%);
+    --GreenPath: #064535;
 }
 .MainPage{
     /*I needed to create a pattern, i tried with flexbox but it didn't work xd, so i checked in google and there is a way that you could create a pattern using the repeating-linear-gradient property of background-image*/

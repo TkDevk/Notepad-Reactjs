@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Pencil from "./Pencil"
-
+import colors from "../../common/colors.js"
 const PencilCase = () => {
    
    const [expand,setExpand] = useState(false)
@@ -30,9 +30,9 @@ const PencilCase = () => {
             </section>
              {expand&&<section 
             id="PencilCase">
-                <Pencil />
-                <Pencil />
-                <Pencil />
+                <Pencil colors={colors.red}/>
+                <Pencil colors={colors.blue}/>
+                <Pencil colors={colors.green}/>
                 <Pencil />
                 <Pencil />
                 <Pencil />

@@ -1,4 +1,4 @@
-const Pencil = ()=>{
+const Pencil = (props)=>{
 
     return(
         <>
