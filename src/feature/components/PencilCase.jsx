@@ -28,14 +28,14 @@ const PencilCase = () => {
                     {/*</figure>*/}
                 </picture>
             </section>
-             {expand&&<section 
+             {expand&& 
+             <section 
             id="PencilCase">
-                <Pencil colors={colors.red}/>
-                <Pencil colors={colors.blue}/>
+                <Pencil colors={colors.black}/>
                 <Pencil colors={colors.green}/>
-                <Pencil />
-                <Pencil />
-                <Pencil />
+                <Pencil colors={colors.yellow}/>
+                <Pencil colors={colors.blue}/>
+                <Pencil colors={colors.red}/>
             </section>}
         </article>
     )

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { toPng } from "html-to-image"
 import download from "downloadjs"
+import colors from "../../common/colors.js"
 const Page = () => {
    /*
    const [inputText, setText] = useState("") //i will pass empty value to text and textState will change it

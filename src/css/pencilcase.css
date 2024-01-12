@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    right:.0;  
+    right:0;
 }
 
 #PencilCase {
@@ -12,9 +12,8 @@
     right: inherit;
     align-self: center;
     gap: .3rem;
-    padding: .5rem;
+    padding:1svw;
     background-color: #b8b4b4;
-
 }
 
 #ShowColor {
@@ -32,8 +31,13 @@
 
 #ShowColor:hover{
     height: 10rem;
-    margin-right: .1svw;
+    right: .1svw;
     background-color:hsl(165, 84%, 15%,0.5);
+    &:hover{
+        #PencilCase{
+            transition: transform 250ms;
+        }
+    }
 }
 
 #PaletteContainer {
