@@ -1,8 +1,10 @@
-import { useState } from "react"
+import {  useState } from "react"
 import { toPng } from "html-to-image"
 import download from "downloadjs"
-import colors from "../../common/colors.js"
-const Page = () => {
+import PropTypes from "prop-types"
+
+const Page = ({inputColor}) => {
+   console.log(inputColor)
    /*
    const [inputText, setText] = useState("") //i will pass empty value to text and textState will change it
 
@@ -15,7 +17,8 @@ const Page = () => {
    }*/
    //onChange={handleText}
 
-   //localStorage use it with text
+
+   //localStorage use it with te xt
    const [inputText, setText] = useState(
       window.localStorage.getItem('inputText')
    )
@@ -41,6 +44,14 @@ const Page = () => {
          console.log(error)
       }
    }
+
+   /**
+   Set localStorage color
+    */
+
+   
+
+
    /*To download my html tag as image i will use 2 libraries
    1- npm install html-to-image
    2- npm install downloadjs
@@ -73,6 +84,7 @@ const Page = () => {
                      placeholder="Insert Title"
                      value={inputTitle}
                      onChange={e => setTitleStorage(e.target.value)}
+                     style={{color: inputColor}}
                   />
                   <h2 id="TextTitle">
                      {inputTitle}
@@ -86,8 +98,9 @@ const Page = () => {
                      name="textarea"
                      id="InputText"
                      onChange={e => setLocalStorage(e.target.value)}
-                     value={inputText}>
-
+                     value={inputText}
+                     style={{color: inputColor}}
+                     >
                   </textarea>
                   {/*Callback to the onChange method*/}
                   <p
@@ -113,4 +126,9 @@ const Page = () => {
       </>
    )
 }
+
+Page.propTypes ={
+   inputColor: PropTypes.string,
+}
+
 export default Page

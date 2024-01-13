@@ -1,44 +1,85 @@
 import { useState } from "react"
 import Pencil from "./Pencil"
 import colors from "../../common/colors.js"
-const PencilCase = () => {
+import PropTypes from "prop-types"
+
+const PencilCase = ({onChangeInputColor}) => {
+    const [expand, setExpand] = useState(false)
+
+     /*
+    const [selectedColor, setSelectedColor] = useState(null);
    
-   const [expand,setExpand] = useState(false)
-   function handleCase (){
-    setExpand(
-        prevValue=>!prevValue
-    )
-   }
+  Create useState to passing the color from pencil to pencilCase
+
+
+    const handleColorClick = (color) => {
+        setSelectedColor(color);
+        // Save the selected color in local storage
+        localStorage.setItem("inputText", color);
+        console.log(selectedColor)
+    };
+
+*/  
+    function handleOpen() {
+        setExpand(
+            prevValue => !prevValue
+        )
+    }
+
+
     return (
         <article id="PencilCaseContainer">
-            <section 
-            onClick={handleCase} 
-            id="ShowColor"
+            <section
+                onClick={handleOpen}
+                id="ShowColor"
             >
-                <picture 
-                id="PaletteContainer">
-                    <figure 
-                    id="ColorPalleteBehind">
+                <picture
+                    id="PaletteContainer">
+                    <figure
+                        id="ColorPalleteBehind">
                     </figure>
-                   {/* <figure id="ColorPallete">*/}
-                       <img 
-                       id="PaletteIcon" 
-                       src="palette-solid.svg" 
-                       alt="Palette Icon" />
+                    {/* <figure id="ColorPallete">*/}
+                    <img
+                        id="PaletteIcon"
+                        src="palette-solid.svg"
+                        alt="Palette Icon" />
                     {/*</figure>*/}
                 </picture>
             </section>
-             {expand&& 
-             <section 
-            id="PencilCase">
-                <Pencil colors={colors.black}/>
-                <Pencil colors={colors.green}/>
-                <Pencil colors={colors.yellow}/>
-                <Pencil colors={colors.blue}/>
-                <Pencil colors={colors.red}/>
-            </section>}
+            {expand &&
+                <section
+                    id="PencilCase">
+                     <figure id="PencilCaseBox">
+                     <figure id="PencilCaseBlanket">
+                    <Pencil
+                        colors={colors.black}
+                        onChangeInputColor={onChangeInputColor}
+                    />
+                    <Pencil
+                        colors={colors.green}
+                        onChangeInputColor={onChangeInputColor}
+                    />
+                    <Pencil
+                        colors={colors.yellow}
+                        onChangeInputColor={onChangeInputColor}
+                    />
+                    <Pencil
+                        colors={colors.blue}
+                        onChangeInputColor={onChangeInputColor}
+                    />
+                    <Pencil
+                        colors={colors.red}
+                        onChangeInputColor={onChangeInputColor}
+                    />
+                    </figure>
+                    </figure>   
+                </section>}
         </article>
     )
+}
+
+PencilCase.propTypes ={
+   onChangeInputColor: PropTypes.func.isRequired,
 }
 
 export default PencilCase

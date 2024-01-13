@@ -11,6 +11,10 @@
     display: flex;
     flex-direction: column;
     position:inherit;
+    z-index: 1;
+    &:hover{
+        cursor: pointer;
+    }
 }
 /*I needed to create a triangule figure so i used clip-path: polygon property, actually pretty cool you can do any figures with clip-path*/
 .PencilPoint{
@@ -20,13 +24,11 @@
     height: 20%;
     display: flex;
     flex-direction: column;
-    z-index: 3;
 }
 .PencilLead{
     width:100%;
     height: 3svh;
-    background-color: var(--RedPrimary); 
-    z-index: 3;
+    z-index: 5;
     position: absolute;
 }
 .PencilBody{
