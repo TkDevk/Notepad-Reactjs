@@ -6,20 +6,6 @@ import PropTypes from "prop-types"
 const PencilCase = ({onChangeInputColor}) => {
     const [expand, setExpand] = useState(false)
 
-     /*
-    const [selectedColor, setSelectedColor] = useState(null);
-   
-  Create useState to passing the color from pencil to pencilCase
-
-
-    const handleColorClick = (color) => {
-        setSelectedColor(color);
-        // Save the selected color in local storage
-        localStorage.setItem("inputText", color);
-        console.log(selectedColor)
-    };
-
-*/  
     function handleOpen() {
         setExpand(
             prevValue => !prevValue
