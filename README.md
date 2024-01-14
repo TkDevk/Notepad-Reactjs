@@ -19,7 +19,7 @@
   - [Design](#design)
 - [Hints](#hints)
   - [Css](#css)
-  - [Reactjs](#react.js)
+  - [Reactjs](#reactjs)
 - [Autor](#autor)
 
 ## Description
@@ -37,7 +37,7 @@ I'm marking this section as hints because i would like to show what i've learned
 - Also, i used ` background: linear-gradient` to bring a custom shape as result you can see that the pallet icon has as background color a good looking degrente and hover to captive the attention of the user.
 - I found a library which you can implement and use as screenshot of a div or any tag, so bassically print any container you want.
 
-### React.js
+### Reactjs
 
 - Using react allowed me to understand how the props really works and how you can uset it in order to pass any value.
 - I tried to solve and issue related with a function not being passed i tried to solve it using `React.context` and `React.provider` but i fixed it lifting the state from a child component to its father, so in the future i will try to use `React.context` and `React.provider` if i see the same esceneario. 
