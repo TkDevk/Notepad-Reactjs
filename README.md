@@ -5,7 +5,7 @@
 </div>
 <br>
 <div align="center">
-<img src="public/landing.png"></img>
+<img src="public/landing.PNG"></img>
   <h3>
     <a href="http://notepaddevk.s3-website-us-east-1.amazonaws.com/">
       Preview Site
