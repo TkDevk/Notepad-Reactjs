@@ -24,6 +24,8 @@
 
 ## Description
 
+Currently version (1.1v)
+
 ### Design
 
 I was studying about data structure writing everything in my note pad so thought that might be a good idea if create some kind Word but with the design of a note pad, so i choose for my deign the yellow color because it looks good with that color :)
