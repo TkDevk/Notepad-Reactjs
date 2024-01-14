@@ -45,4 +45,4 @@ I'm marking this section as hints because i would like to show what i've learned
 
 ## Autor
 
-- Github - [TkDevk]([https://github.com/Blackpachamame](https://github.com/TkDevk))
+- Github - [TkDevk](https://github.com/Blackpachamame](https://github.com/TkDevk)
