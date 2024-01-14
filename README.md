@@ -12,13 +12,14 @@
     </a>
   </h3>
 </div> 
-## Tabla de contenido
+
+## Table of contents
 
 - [Description](#description)
   - [Design](#design)
 - [Hints](#hints)
   - [Css](#css)
-  - [React.js](#react.js)
+  - [Reactjs](#react.js)
 - [Autor](#autor)
 
 ## Description
