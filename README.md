@@ -1,6 +1,6 @@
 <h1 align="center">Notepad React js</h1>
 
-<div align="center">
+<div  align="center">
    Welcome, meet the process:
 </div>
 <br>
