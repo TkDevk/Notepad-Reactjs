@@ -45,6 +45,6 @@ I'm marking this section as hints because i would like to show what i've learned
 - I tried to solve and issue related with a function not being passed i tried to solve it using `React.context` and `React.provider` but i fixed it lifting the state from a child component to its father, so in the future i will try to use `React.context` and `React.provider` if i see the same scenario. 
 
 
-## Autor
+### Autor
 
 - Github - [TkDevk](https://github.com/TkDevk)
