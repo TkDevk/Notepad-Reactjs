@@ -1,4 +1,4 @@
-<h1 align="center">Notepad React js</h1>
+<h1 align="center">Notepad React Js</h1>
 
 <div  align="center">
    Welcome, meet the process:
